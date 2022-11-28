@@ -49,6 +49,9 @@ class Edit_Contact_Page : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.ed_edit -> {
+                dataBinding.etEdFname.isFocusableInTouchMode = true
+                dataBinding.etEdLname.isFocusableInTouchMode = true
+                dataBinding.etEdNumber.isFocusableInTouchMode = true
                 dataBinding.btnUpdate.visibility = View.VISIBLE
             }
             R.id.ed_delete -> {

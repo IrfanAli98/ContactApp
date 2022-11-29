@@ -20,7 +20,7 @@ class Edit_Contact_Page : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dataBinding=DataBindingUtil.setContentView(this, R.layout.activity_edit_contact_page)
+        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_edit_contact_page)
         factory = ContactVMFactory(ContactDBRepository(this))
         viewModel = ViewModelProvider(this, factory)[ContactViewModel::class.java]
 
@@ -33,13 +33,16 @@ class Edit_Contact_Page : AppCompatActivity() {
 
         dataBinding.btnUpdate.setOnClickListener {
 
-            viewModel.updateContact(dataBinding.etEdFname.text.toString(),dataBinding.etEdLname.text.toString(),
-                dataBinding.etEdNumber.text.toString(), contact.id)
+            viewModel.updateContact(
+                dataBinding.etEdFname.text.toString(), dataBinding.etEdLname.text.toString(),
+                dataBinding.etEdNumber.text.toString(), contact.id
+            )
 
             finish()
         }
 
     }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.edit_contact_menu_opton, menu)
         return super.onCreateOptionsMenu(menu)

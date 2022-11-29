@@ -36,7 +36,7 @@ class ContactDBRepository(private val context: Context) {
 
     // TODO: function to save the Contacts from Table
     fun saveContact(fname:String, lname:String, mobNo:String){
-        val contentValues=ContentValues()
+        val contentValues = ContentValues()
         contentValues.put(FNAME, fname)
         contentValues.put(LNAME, lname)
         contentValues.put(MOB_NO, mobNo)

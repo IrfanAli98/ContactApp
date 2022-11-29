@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         return viewModel.getContacs()
     }
     fun updateUI(){
-        adapter=ContactRecyclerViewAdapter(getContactList(), object:OnItemClickListener{
+        adapter=ContactRecyclerViewAdapter(this,getContactList(), object:OnItemClickListener{
             override fun onItemClick(contact: Contact, position: Int) {
                 val intent=Intent(this@MainActivity, Edit_Contact_Page::class.java)
                 intent.putExtra(Keys.CONTACT, Gson().toJson(contact))

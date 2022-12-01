@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity() {
         factory = ContactVMFactory(ContactDBRepository(this))
         viewModel = ViewModelProvider(this, factory)[ContactViewModel::class.java]
 
-//        val list = viewModel.getContacs()
-
         val layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         dataBinding.rcwView.layoutManager = layoutManager
         dataBinding.rcwView.setHasFixedSize(true)

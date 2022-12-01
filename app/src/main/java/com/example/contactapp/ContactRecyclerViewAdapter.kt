@@ -49,8 +49,8 @@ class ContactRecyclerViewAdapter(val context: Context, private var contactList: 
             }
             else{
                 ActivityCompat.requestPermissions(context as Activity, requestPermissionList, REQUEST_CODE)
-
             }
+
         }
 
         holder.itemView.setOnClickListener {
